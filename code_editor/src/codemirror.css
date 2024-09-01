@@ -1,0 +1,32 @@
+/* custom-codemirror.css */
+
+.CodeMirror {
+    background-color: #282a36; /* Change background color */
+    color: #f8f8f2; /* Change default text color */
+    font-size: 18px; /* Change font size */
+    line-height: 1.5; /* Change line height */
+    padding: 10px; /* Add padding */
+    border: 1px solid #44475a; /* Add border */
+    border-radius: 5px; /* Add border radius */
+    height: 100%;
+    width: 100vw; /* Ensure it takes full height */
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+}
+
+.CodeMirror-cursor {
+    border-left: 2px solid #50fa7b; /* Change cursor color */
+}
+
+.CodeMirror-selected {
+    background-color: #44475a; /* Change selection background color */
+}
+
+.CodeMirror-gutter.CodeMirror-linenumbers {
+    background: #1c1e29; /* Change gutter background color */
+    color: #6272a4; /* Change line number color */
+}
+
+.CodeMirror-matchingbracket {
+    background-color: #50fa7b; /* Change matching bracket background */
+    color: #282a36; /* Change matching bracket text color */
+}

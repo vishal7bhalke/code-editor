@@ -1,0 +1,38 @@
+{
+  "name": "code_editor",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+  "dev": "vite",
+  "start": "npm run dev",
+  "build": "vite build",
+  "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+  "preview": "vite preview",
+  "server:prod": "node server.js"
+},
+
+  "dependencies": {
+    "codemirror": "^5.65.17",
+    "express": "^4.19.2",
+    "nodemon": "^3.1.4",
+    "react": "^18.3.1",
+    "react-avatar": "^5.0.3",
+    "react-dom": "^18.3.1",
+    "react-hot-toast": "^2.4.1",
+    "react-router-dom": "^6.25.1",
+    "socket.io": "^4.7.5",
+    "socket.io-client": "^4.7.5",
+    "uuid": "^10.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react-swc": "^3.5.0",
+    "concurrently": "^8.2.2",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react": "^7.34.3",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-plugin-react-refresh": "^0.4.7",
+    "vite": "^5.3.4"
+  }
+}
