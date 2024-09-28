@@ -5,15 +5,22 @@ const http = require('http');
 const { Server } = require('socket.io');
 
 // Serve static files from the frontend's dist directory
-// app.use(express.static(path.join(__dirname, '../frontend/dist')));
+app.use(express.static(path.join(__dirname, '../frontend/dist')));
 
 // // For all other routes, serve the index.html from the frontend's dist directory
-// app.get('*', (req, res) => {
-//     res.sendFile(path.resolve(__dirname, '../frontend/dist', 'index.html'));
-// });
+app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, '../frontend/dist', 'index.html'));
+});
 
 // Create the HTTP server and bind it with Express and Socket.IO
 const server = http.createServer(app);
+
+const io = new Server(server, {
+    cors: {
+        origin: "https://codeeditorapp-react.netlify.app/", // Replace with your frontend URL (e.g., Vercel/Netlify URL)
+        methods: ["GET", "POST"],
+    },
+});
 const io = new Server(server);
 
 const usersocketmap = {};
