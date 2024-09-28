@@ -21,7 +21,7 @@ const io = new Server(server, {
         methods: ["GET", "POST"],
     },
 });
-const io = new Server(server);
+
 
 const usersocketmap = {};
 
