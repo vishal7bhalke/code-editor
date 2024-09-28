@@ -6,7 +6,7 @@
   "scripts": {
         "dev": "vite",
   "start": "npm run dev",
-  "build": "cd frontend && npm install && npm run build",  // This line builds the frontend
+  "build": "cd frontend && npm install && npm run build",  
   "server:prod": "node server.js"
   },
   "keywords": [],
