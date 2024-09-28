@@ -1,16 +1,17 @@
-import {io} from 'socket.io-client';
+import { io } from 'socket.io-client';
 
-
-export const initSocket =async() =>{
-    const options={
-        'force new connection':true,
-        reconnectionAttempts:'infinity',
-        timeout:10000,
-        transports:['websocket'],
+export const initSocket = async () => {
+    const options = {
+        'force new connection': true,
+        reconnectionAttempts: 'infinity',
+        timeout: 10000,
+        transports: ['websocket'],
     };
-    // REACT_APP_BACKEND_URL = "http://localhost:5000"
-    // const backendUrl = process.env.REACT_APP_BACKEND_URL;
 
-    // console.log('Backend URL:', backendUrl);
-    return io("http://localhost:5000", options);
+    // Fetch backend URL from Vite's environment variables, fallback to your Render backend URL
+    const backendUrl = import.meta.env.VITE_BACKEND_URL || "https://code-editor-4-kotr.onrender.com";
+
+    console.log('Connecting to Backend:', backendUrl);
+
+    return io(backendUrl, options);
 };
